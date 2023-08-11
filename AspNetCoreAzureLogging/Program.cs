@@ -1,6 +1,5 @@
 using Serilog;
 using AspNetCoreAzureLogging;
-using Microsoft.ApplicationInsights.Extensibility;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
