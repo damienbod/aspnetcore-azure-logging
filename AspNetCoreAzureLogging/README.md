@@ -1,1 +1,0 @@
-# aspnetcore-azure-logging
