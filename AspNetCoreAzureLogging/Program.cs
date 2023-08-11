@@ -13,7 +13,7 @@ try
 
     builder.Host.UseSerilog((ctx, lc) => lc
         .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}")
-        .WriteTo.File("../_logs-uifile.txt")
+        //.WriteTo.File("../_logs-uifile.txt") // in the configuration
         .Enrich.FromLogContext()
         .ReadFrom.Configuration(ctx.Configuration));
 
