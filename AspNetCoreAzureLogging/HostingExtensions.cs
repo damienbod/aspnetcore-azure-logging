@@ -1,13 +1,8 @@
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
 using Microsoft.IdentityModel.Logging;
-using Microsoft.IdentityModel.Tokens;
 using Serilog;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Cryptography.X509Certificates;
-using System.Text.Json;
 
 namespace AspNetCoreAzureLogging;
 
@@ -20,7 +15,12 @@ internal static class HostingExtensions
         var configuration = builder.Configuration;
         _env = builder.Environment;
 
-        // Add services to the container.
+        services.AddDistributedMemoryCache();
+
+        services.AddMicrosoftIdentityWebAppAuthentication(configuration)
+            .EnableTokenAcquisitionToCallDownstreamApi() // required to force PKCE
+            .AddDistributedTokenCaches();
+
         services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
             .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
 
