@@ -21,9 +21,6 @@ internal static class HostingExtensions
             .EnableTokenAcquisitionToCallDownstreamApi() // required to force PKCE
             .AddDistributedTokenCaches();
 
-        services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-            .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
-
         services.AddAuthorization(options =>
         {
             // By default, all incoming requests will be authorized according to the default policy.
