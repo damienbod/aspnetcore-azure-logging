@@ -1,8 +1,6 @@
 # ASP.NET Core logging in Azure
 
-[![.NET](https://github.com/damienbod/aspnetcore-azure-logging/actions/workflows/dotnet.yml/badge.svg)](https://github.com/damienbod/aspnetcore-azure-logging/actions/workflows/dotnet.yml)
-
-[![Deploy to Azure](https://github.com/damienbod/aspnetcore-azure-logging/actions/workflows/azure-webapps-dotnet-core.yml/badge.svg)](https://github.com/damienbod/aspnetcore-azure-logging/actions/workflows/azure-webapps-dotnet-core.yml)
+[![.NET](https://github.com/damienbod/aspnetcore-azure-logging/actions/workflows/dotnet.yml/badge.svg)](https://github.com/damienbod/aspnetcore-azure-logging/actions/workflows/dotnet.yml) [![Deploy to Azure](https://github.com/damienbod/aspnetcore-azure-logging/actions/workflows/azure-webapps-dotnet-core.yml/badge.svg)](https://github.com/damienbod/aspnetcore-azure-logging/actions/workflows/azure-webapps-dotnet-core.yml)
 
 Some KDL queries for the traces or the exceptions
 
