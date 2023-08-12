@@ -7,7 +7,7 @@ Some KDL queries for the traces or the exceptions
 ```
 traces
 | where * hassuffix "my home"
-| and severityLevel >= 2
+and severityLevel >= 2
 ```
 
 ```
