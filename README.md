@@ -23,6 +23,8 @@ and severityLevel >= 1
 
 ## Links
 
+https://github.com/serilog/serilog
+
 https://learn.microsoft.com/en-us/aspnet/core/fundamentals/logging
 
 https://learn.microsoft.com/en-us/azure/azure-monitor/app/ilogger
