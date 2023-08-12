@@ -3,19 +3,18 @@ using AspNetCoreAzureLogging;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
+    .WriteTo.AzureApp()
     .CreateBootstrapLogger();
 
-Log.Information("Starting up API");
+Log.Information("Starting AspNetCoreAzureLogging application");
 
 try
 {
     var builder = WebApplication.CreateBuilder(args);
 
-    builder.Host.UseSerilog((ctx, lc) => lc
+    builder.Host.UseSerilog((context, loggerConfiguration) => loggerConfiguration
         .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}")
-        //.WriteTo.File("../_logs-uifile.txt") // in the configuration
-        .Enrich.FromLogContext()
-        .ReadFrom.Configuration(ctx.Configuration));
+        .ReadFrom.Configuration(context.Configuration));
 
     var app = builder
         .ConfigureServices()
