@@ -2,6 +2,8 @@
 
 [![.NET](https://github.com/damienbod/aspnetcore-azure-logging/actions/workflows/dotnet.yml/badge.svg)](https://github.com/damienbod/aspnetcore-azure-logging/actions/workflows/dotnet.yml) [![Deploy to Azure](https://github.com/damienbod/aspnetcore-azure-logging/actions/workflows/azure-webapps-dotnet-core.yml/badge.svg)](https://github.com/damienbod/aspnetcore-azure-logging/actions/workflows/azure-webapps-dotnet-core.yml)
 
+[ASP.NET Core Logging using Serilog and Azure](https://damienbod.com)
+
 Some KDL queries for the traces or the exceptions
 
 ```
