@@ -17,11 +17,6 @@ exceptions
 | where * hassuffix "FIND"
 ```
 
-```
-traces
-| where * hassuffix "my home"
-and severityLevel >= 1
-```
 
 ## Links
 
