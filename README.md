@@ -17,6 +17,9 @@ exceptions
 | where * hassuffix "FIND"
 ```
 
+## History
+
+2023-08-27 clean up packages for Serilog
 
 ## Links
 
