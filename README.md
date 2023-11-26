@@ -19,6 +19,7 @@ exceptions
 
 ## History
 
+2023-11-26 .NET 8
 2023-08-27 clean up packages for Serilog
 
 ## Links
