@@ -25,6 +25,8 @@ exceptions
 
 ## Links
 
+https://github.com/rufer7/aspnetcore-serilog-azureappservice
+
 https://github.com/serilog/serilog
 
 https://learn.microsoft.com/en-us/aspnet/core/fundamentals/logging
