@@ -24,13 +24,13 @@ internal static class HostingExtensions
         {
             options.FallbackPolicy = options.DefaultPolicy;
         });
-        
+
         services.AddRazorPages()
             .AddMicrosoftIdentityUI();
 
         return builder.Build();
     }
-    
+
     public static WebApplication ConfigurePipeline(this WebApplication app)
     {
         IdentityModelEventSource.ShowPII = true;

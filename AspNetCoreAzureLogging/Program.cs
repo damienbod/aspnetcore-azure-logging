@@ -1,9 +1,8 @@
-using Serilog;
 using AspNetCoreAzureLogging;
+using Serilog;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
-    .WriteTo.AzureApp()
     .CreateBootstrapLogger();
 
 Log.Information("Starting AspNetCoreAzureLogging application");
