@@ -5,14 +5,12 @@ using Serilog;
 
 namespace AspNetCoreAzureLogging;
 
-internal static class HostingExtensions
+internal static class StartupExtensions
 {
-    private static IWebHostEnvironment? _env;
     public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
     {
         var services = builder.Services;
         var configuration = builder.Configuration;
-        _env = builder.Environment;
 
         services.AddDistributedMemoryCache();
 
@@ -37,7 +35,7 @@ internal static class HostingExtensions
 
         app.UseSerilogRequestLogging();
 
-        if (_env!.IsDevelopment())
+        if (app.Environment.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
         }
@@ -49,11 +47,8 @@ internal static class HostingExtensions
 
         app.UseHttpsRedirection();
         app.UseStaticFiles();
-
         app.UseRouting();
-
         app.UseAuthorization();
-
         app.MapRazorPages();
         app.MapControllers();
 
