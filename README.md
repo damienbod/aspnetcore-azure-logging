@@ -19,6 +19,7 @@ exceptions
 
 ## History
 
+- 2024-12-31 .NET 9
 - 2024-10-26 Updated packages
 - 2024-01-14 Updated packages, remove AzureApp sink
 - 2023-11-26 .NET 8
